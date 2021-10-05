@@ -1,16 +1,18 @@
-# This is a sample Python script.
+import random
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+def SelectFortune(fortune_list):
+    '''
+    :param fortune_list:    점괘결과 목록
+    :return:        점괘결과
+    '''
+
+    fortune_list_count = len(fortune_list)
+    random_number = random.randrange(0, fortune_list_count)
+    fortune_result = fortune_list[random_number]
+    print("전체 항목 개수 = " + str(fortune_list_count) + ", 랜덤 숫자 = " + str(random_number))
+    return fortune_result
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    fortune_list = ["좋음", "보통", "나쁨"]
+    print(SelectFortune(fortune_list))
