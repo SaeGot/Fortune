@@ -3,7 +3,11 @@ import random
 
 
 class FortuneCookie(Fortune):
-    def SelectFortune(self):
+    def __init__(self, fortune_Results: list):
+        super().__init__(fortune_Results)
+
+
+    def SelectFortune(self) -> int:
         '''
         점괘 뽑기
 

@@ -2,7 +2,7 @@ import random
 
 
 class Fortune:
-    def __init__(self, fortune_Results):
+    def __init__(self, fortune_Results: list):
         '''
         
         :param fortune_Results:    점괘결과
@@ -12,7 +12,7 @@ class Fortune:
         self._MakeFortuneList()
 
 
-    def SelectFortune(self):
+    def SelectFortune(self) -> int:
         '''
         점괘 뽑기
 
@@ -31,8 +31,6 @@ class Fortune:
     def _MakeFortuneList(self):
         '''
         점괘결과 점괘 리스트에 넣기
-
-        :return:    점괘 리스트
         '''
         # 점괘결과 점괘 리스트에 넣기
         for fortune in self._fortuneResults:
