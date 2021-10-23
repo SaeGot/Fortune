@@ -2,7 +2,7 @@ import random
 from typing import Tuple
 
 class Fortune:
-    def __init__(self, fortune_Results: list, pity_System: Tuple[int, str]):
+    def __init__(self, fortune_Results: list, pity_System: Tuple[int, str]=[0,""], box_Name: str = ""):
         """
         일반 점괘
 
@@ -13,6 +13,7 @@ class Fortune:
         self._pityNumber = pity_System[0]
         self._pityFortune = pity_System[1]
         self._pityCount = 0
+        self._boxName = box_Name
         self._fortuneList = []
 
         self._MakeFortuneList()
@@ -24,8 +25,8 @@ class Fortune:
 
         :return:    점괘결과
         """
-        print("점괘 뽑기 시작")
-        if self._pityCount >= self._pityNumber:
+        print(self._boxName, "점괘 뽑기 시작")
+        if self._pityCount >= self._pityNumber != 0:
             print("천장 시스템 발동")
             self._pityCount = 0
             print("뽑힌 점괘 = " + self._pityFortune + "\n")

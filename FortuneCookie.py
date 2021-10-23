@@ -4,14 +4,14 @@ from typing import Tuple
 
 
 class FortuneCookie(Fortune):
-    def __init__(self, fortune_Results: list, pity_System: Tuple[int, str]):
+    def __init__(self, fortune_Results: list, pity_System: Tuple[int, str] = [0,""], box_Name: str = ""):
         """
         포춘쿠키형 점괘
 
         :param fortune_Results:     점괘결과
         :param pity_System:         [천장 도달까지의 필요 뽑기 횟수(0이면 천장 없음), 천장 점괘]
         """
-        super().__init__(fortune_Results, pity_System)
+        super().__init__(fortune_Results, pity_System, box_Name)
 
 
     def SelectFortune(self) -> int:
@@ -20,8 +20,8 @@ class FortuneCookie(Fortune):
 
         :return:    점괘결과
         """
-        print("점괘 뽑기 시작")
-        if self._pityCount >= self._pityNumber:
+        print(self._boxName, "점괘 뽑기 시작")
+        if self._pityCount >= self._pityNumber != 0:
             print("천장 시스템 발동")
             self._pityCount = 0
             print("뽑힌 점괘 = " + self._pityFortune + "\n")
