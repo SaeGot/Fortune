@@ -4,11 +4,16 @@ import random
 
 class FortuneCookie(Fortune):
     def __init__(self, fortune_Results: list):
-        super().__init__(fortune_Results)
-
-    def SelectFortune(self) -> int:
         """
         포춘쿠키형 점괘
+
+        :param fortune_Results:    점괘결과
+        """
+        super().__init__(fortune_Results)
+
+    def SelectFortune(self) -> str:
+        """
+        점괘 뽑기
 
         :return:    점괘결과
         """

@@ -12,7 +12,7 @@ class Fortune:
         self._fortuneList = []
         self._MakeFortuneList()
 
-    def SelectFortune(self) -> int:
+    def SelectFortune(self) -> str:
         """
         점괘 뽑기
 
