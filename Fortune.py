@@ -1,8 +1,9 @@
 import random
 from typing import Tuple
 
+
 class Fortune:
-    def __init__(self, fortune_Results: list, pity_System: Tuple[int, str] = (0,""), box_Name: str = ""):
+    def __init__(self, fortune_Results: list, pity_System: Tuple[int, str] = (0, ""), box_Name: str = ""):
         """
         일반 점괘
 
@@ -18,7 +19,6 @@ class Fortune:
         self._fortuneList = []
 
         self._MakeFortuneList()
-
 
     def SelectFortune(self) -> str:
         """
@@ -48,7 +48,6 @@ class Fortune:
         print("뽑힌 점괘 = " + fortune_result + "\n")
 
         return fortune_result
-
 
     def _MakeFortuneList(self):
         """

@@ -4,7 +4,7 @@ from typing import Tuple
 
 
 class FortuneCookie(Fortune):
-    def __init__(self, fortune_Results: list, pity_System: Tuple[int, str] = (0,""), box_Name: str = ""):
+    def __init__(self, fortune_Results: list, pity_System: Tuple[int, str] = (0, ""), box_Name: str = ""):
         """
         포춘쿠키형 점괘
 
@@ -14,8 +14,7 @@ class FortuneCookie(Fortune):
         """
         super().__init__(fortune_Results, pity_System, box_Name)
 
-
-    def SelectFortune(self) -> int:
+    def SelectFortune(self) -> str:
         """
         점괘 뽑기
 
