@@ -5,7 +5,7 @@ class CSVReader:
     def __init__(self, file_Name: str, data_Type: list):
         """
         CSV 읽기
-
+        
         :param file_Name:        CSV 파일명
         :param data_Type:   데이터 타입
         """
@@ -16,7 +16,7 @@ class CSVReader:
     def GetData(self) -> list:
         """
         데이터 가져오기
-
+        
         :return:    데이터 리스트(2차원)
         """
         return self._data
