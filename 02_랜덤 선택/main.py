@@ -1,14 +1,15 @@
 import random
 
-def SelectFortune(fortune_list):
-    '''
-    :param fortune_list:    점괘결과 목록
-    :return:        점괘결과
-    '''
 
-    fortune_list_count = len(fortune_list)
+def SelectFortune(fortune_List):
+    """
+    :param fortune_List:    점괘결과 목록
+    :return:        점괘결과
+    """
+
+    fortune_list_count = len(fortune_List)
     random_number = random.randrange(0, fortune_list_count)
-    fortune_result = fortune_list[random_number]
+    fortune_result = fortune_List[random_number]
     print("전체 항목 개수 = " + str(fortune_list_count) + ", 랜덤 숫자 = " + str(random_number))
     return fortune_result
 
