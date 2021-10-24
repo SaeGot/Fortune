@@ -2,12 +2,13 @@ import random
 from typing import Tuple
 
 class Fortune:
-    def __init__(self, fortune_Results: list, pity_System: Tuple[int, str]=[0,""], box_Name: str = ""):
+    def __init__(self, fortune_Results: list, pity_System: Tuple[int, str] = (0,""), box_Name: str = ""):
         """
         일반 점괘
 
         :param fortune_Results:     점괘결과
         :param pity_System:         [천장 도달까지의 필요 뽑기 횟수(0이면 천장 없음), 천장 점괘]
+        :param box_Name:            점괘 박스 이름
         """
         self._fortuneResults = fortune_Results
         self._pityNumber = pity_System[0]
