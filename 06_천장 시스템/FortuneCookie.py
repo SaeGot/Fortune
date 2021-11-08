@@ -13,8 +13,7 @@ class FortuneCookie(Fortune):
         """
         super().__init__(fortune_Results, pity_System)
 
-
-    def SelectFortune(self) -> int:
+    def SelectFortune(self) -> str:
         """
         점괘 뽑기
 

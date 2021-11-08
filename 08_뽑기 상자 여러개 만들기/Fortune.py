@@ -35,8 +35,8 @@ class Fortune:
 
         number_of_cookies = len(self._fortuneList)
         random_number = random.randrange(0, number_of_cookies)
-        print("점괘 내용 =", self._fortuneList)
-        print("랜덤 숫자 = " + str(random_number))
+        print("쿠키 내용 =", self._fortuneList)
+        print("전체 쿠키 개수 = " + str(number_of_cookies) + ", 랜덤 숫자 = " + str(random_number))
         fortune_result = self._fortuneList[random_number]
 
         if fortune_result == self._pityFortune:
