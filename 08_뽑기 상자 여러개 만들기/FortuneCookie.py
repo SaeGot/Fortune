@@ -1,6 +1,7 @@
 from Fortune import Fortune
 import random
 from typing import Tuple
+import copy
 
 
 class FortuneCookie(Fortune):
@@ -13,6 +14,7 @@ class FortuneCookie(Fortune):
         :param box_Name:            포춘쿠키 박스 이름
         """
         super().__init__(fortune_Results, pity_System, box_Name)
+        self._fortuneInitList = copy.deepcopy(self._fortuneList)
 
     def SelectFortune(self) -> str:
         """
@@ -22,8 +24,9 @@ class FortuneCookie(Fortune):
         """
         print(self._boxName, "점괘 뽑기 시작")
         if self._pityCount >= self._pityNumber != 0:
-            print("천장 시스템 발동")
+            print("천장 시스템 발동, 쿠키 내용 초기화")
             self._pityCount = 0
+            self._fortuneList = self._fortuneInitList
             print("뽑힌 점괘 = " + self._pityFortune + "\n")
             return self._pityFortune
 
@@ -35,7 +38,8 @@ class FortuneCookie(Fortune):
 
         if fortune_result == self._pityFortune:
             self._pityCount = 0
-            print("천장 뽑기 횟수 초기화")
+            self._fortuneList = self._fortuneInitList
+            print("천장 뽑기 횟수 초기화, 쿠키 내용 초기화")
         else:
             self._pityCount += 1
         print("뽑힌 점괘 = " + fortune_result + "\n")
