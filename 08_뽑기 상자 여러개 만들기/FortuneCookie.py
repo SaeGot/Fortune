@@ -26,7 +26,7 @@ class FortuneCookie(Fortune):
         if self._pityCount >= self._pityNumber != 0:
             print("천장 시스템 발동, 쿠키 내용 초기화")
             self._pityCount = 0
-            self._fortuneList = self._fortuneInitList
+            self._fortuneList = copy.deepcopy(self._fortuneInitList)
             print("뽑힌 점괘 = " + self._pityFortune + "\n")
             return self._pityFortune
 
@@ -38,7 +38,7 @@ class FortuneCookie(Fortune):
 
         if fortune_result == self._pityFortune:
             self._pityCount = 0
-            self._fortuneList = self._fortuneInitList
+            self._fortuneList = copy.deepcopy(self._fortuneInitList)
             print("천장 뽑기 횟수 초기화, 쿠키 내용 초기화")
         else:
             self._pityCount += 1
